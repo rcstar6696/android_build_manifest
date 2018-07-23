@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Please do not manually edit this file-->
+<manifest>         
+	<remote  name="carbonrom"
+           fetch="https://github.com/CarbonROM/"/>
+           
+   <remote  name="lineageos"
+           fetch="https://github.com/LineageOS/"/>
+                      
+   <remote  name="omnirom"
+           fetch="https://github.com/omnirom/"/>
+           
+    <remote  name="obsd39"
+           fetch="https://github.com/obsd39/"/>
+    
+    <remote  name="rcstar6696"
+           fetch="https://github.com/rcstar6696/"/>
+
+<!-- RCSTAR6696 MANIFEST -->  
+           
+	<project name="android_build_manifest" path="repo/local_manifest" remote="rcstar6696" revision="cr-6.1" >
+	<linkfile src="rcstar6696.xml" dest="repo/local_manifest/local_manifest.xml"/>
+	</project>
+	
+	<project name="android_build_scripts" path="build/scripts" remote="rcstar6696" revision="cr-6.1" >
+	<linkfile src="buildxiaomi.sh" dest="buildxiaomi.sh" />
+	<linkfile src="buildxiaomi_kernel.sh" dest="buildxiaomi_kernel.sh" />
+	<linkfile src="buildsony.sh" dest="buildsony.sh" />
+	<linkfile src="buildsony_kernel.sh" dest="buildsony_kernel.sh" />
+	<linkfile src="sync.sh" dest="sync.sh" />
+	<linkfile src="audit_alow.sh" dest="audit_alow.sh" />
+	<linkfile src="buildmodule.sh" dest="buildmodule.sh" />
+	</project>
+	
+<!-- RCSTAR6696 MANIFEST -->        
+           
+<!-- SONY MANIFEST -->          
+                                 
+  <!-- kernel 3.4 -->
+	<project name="android_kernel_sony_msm8974" path="kernel/sony/msm8974" remote="carbonrom" revision="cr-6.1"/>
+	
+  <!-- msm8974 -->
+	<project name="android_device_sony_msm8974-common" path="device/sony/msm8974-common" remote="carbonrom" revision="cr-6.1"/>
+
+  <!-- shinano -->
+	<project name="android_device_sony_shinano-common" path="device/sony/shinano-common" remote="carbonrom" revision="cr-6.1"/>
+  
+  <!-- device-->
+	<project name="android_device_sony_sirius" path="device/sony/sirius" remote="carbonrom" revision="cr-6.1" />
+	<project name="android_device_sony_castor_windy" path="device/sony/castor_windy" remote="carbonrom" revision="cr-6.1"/>
+	<project name="android_device_sony_castor" path="device/sony/castor" remote="carbonrom" revision="cr-6.1" />
+
+  <!-- sony common -->
+	<project name="android_device_sony_common" path="device/sony/common" remote="lineageos" revision="lineage-15.0"/>
+	
+  <!-- sony hardware -->	
+	<project name="android_hardware_sony_thermanager" path="hardware/sony/thermanager" remote="omnirom" revision="android-8.1"/>
+	<project name="android_hardware_sony_macaddrsetup" path="hardware/sony/macaddrsetup" remote="omnirom" revision="android-8.1"/>	
+	<project name="android_hardware_sony_timekeep" path="hardware/sony/timekeep" remote="omnirom" revision="android-8.1"/>	
+	<project name="android_hardware_broadcom_fm" path="hardware/broadcom/fm" remote="omnirom" revision="android-8.1"/>
+	<project name="android_hardware_sony_location" path="hardware/sony/location" remote="omnirom" revision="android-8.1"/>
+	
+  <!-- qcom common -->
+	<project name="android_device_qcom_common" path="device/qcom/common" remote="lineageos" revision="lineage-15.1"/>
+	
+  <!-- FM Radio -->	
+	<project name="packages_apps_ancquicksettings" path="packages/apps/ancquicksettings" remote="rcstar6696" revision="master"/>
+
+  <!-- vendor -->
+	<project name="proprietary_vendor_sony" path="vendor/sony" remote="obsd39" revision="cr-6.1" />
+	
+<!-- SONY MANIFEST -->
+
+<!-- XIAOMI MANIFEST -->
+
+  <!-- kernel -->
+	<!-- following later -->	
+
+  <!-- tablet -->
+	<project name="android_device_xiaomi_wayne" path="device/xiaomi/wayne" remote="rcstar6696" revision="lineage-15.1"/>
+  
+  <!-- phone-->
+	<project name="android_device_xiaomi_clover" path="device/xiaomi/clover" remote="rcstar6696" revision="mko-mr1"/>
+
+  <!-- vendor -->	
+	<project name="android_vendor_xiaomi_wayne" path="vendor/xiaomi/wayne" remote="rcstar6696" revision="lineage-15.1" />
+	<project name="android_vendor_xiaomi_clover" path="vendor/xiaomi/clover" remote="rcstar6696" revision="mko-mr1" />
+
+	
+  <!-- Gapps -->	
+	<!-- following later -->	
+
+<!-- HUAWEI MANIFEST -->
+</manifest>
